@@ -1,0 +1,42 @@
+project:
+  type: website
+  render:
+    - episodes/*
+    - "!CODE_OF_CONDUCT.md"
+    - "!CONTRIBUTING.md"
+    - "!LICENSE.md"
+
+website:
+  title: "Introduction to The Carpentries Workbench"
+  favicon: need-the-logo.png
+  bread-crumbs: false
+  page-navigation: true
+  back-to-top-navigation: true
+  reader-mode: true
+  repo-url: https://github.com/astroDimitrios/sandpaper-docs-quarto
+  repo-actions: [edit, issue]
+  search:
+    location: navbar
+    type: overlay
+  navbar:
+    website:
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            href:  https://code.com
+          - text: Report a Bug
+            href:  https://bugs.com
+  sidebar:
+    style: "floating"
+    contents:
+      - episodes/introduction.md
+
+language:
+  search-box-placeholder: Search
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

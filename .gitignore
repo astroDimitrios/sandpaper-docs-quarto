@@ -1,6 +1,7 @@
-# sandpaper files
+# quarto files
 episodes/*html
 site/*
+_site/*
 !site/README.md
 
 # History files
@@ -50,3 +51,5 @@ docs/
 po/*~
 
 renv/sandbox
+
+/.quarto/
