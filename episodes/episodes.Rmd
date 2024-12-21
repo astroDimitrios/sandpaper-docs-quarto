@@ -2,6 +2,9 @@
 title: "Episode Structure"
 teaching: 15
 exercises: 2
+episode: 2
+episodes: 7
+input_file: "episodes"
 ---
 
 
@@ -1062,7 +1065,7 @@ documents](https://blog.rstudio.com/2021/04/20/knitr-fig-alt/). In addition, you
 can also use `fig.cap` to provide a caption that puts the picture into context
 (but take care to not be redundant; screen readers will read both fields).
 
-```{r pyramid, fig.cap = "Sun arise each and every morning", fig.alt = "pie chart illusion of a pyramid"}
+```{r pyramid2, fig.cap = "Sun arise each and every morning", fig.alt = "pie chart illusion of a pyramid"}
 pie(
   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),
   init.angle = 315,

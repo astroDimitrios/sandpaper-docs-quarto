@@ -2,6 +2,9 @@
 title: "Editing a {sandpaper} lesson"
 teaching: 5
 exercises: 0
+episode: 3
+episodes: 7
+input_file: "editing"
 ---
 
 :::::::::::::::::::: questions

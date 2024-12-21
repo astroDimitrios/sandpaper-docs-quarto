@@ -1,0 +1,44 @@
+
+
+# Introduction to The Carpentries Workbench
+
+{{< include introduction.md >}}
+
+
+# Episode Structure
+
+{{< include episodes.Rmd >}}
+
+
+# Editing a {sandpaper} lesson
+
+{{< include editing.md >}}
+
+
+# EXAMPLE: Using RMarkdown
+
+{{< include example.Rmd >}}
+
+
+# Lesson Deployment
+
+{{< include deployment.md >}}
+
+
+# Maintaining a Healthy Infrastructure
+
+{{< include update.md >}}
+
+
+# Auditing Pull Requests
+
+{{< include pull-request.md >}}
+---
+title: 'Extract All Images'
+format: 
+  revealjs:
+    slide-level: 2
+    navigation-mode: vertical
+filters:
+  - E:/Documents/astroDimitrios/sandpaper-docs-quarto/_extensions/astrodimitrios/carpentries/images-filter.lua
+---

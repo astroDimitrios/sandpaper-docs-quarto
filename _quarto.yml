@@ -1,42 +1,51 @@
 project:
   type: website
+  pre-render:
+    - _extensions\astrodimitrios\carpentries\create-aio-file.lua
   render:
     - episodes/*
-    - "!CODE_OF_CONDUCT.md"
-    - "!CONTRIBUTING.md"
-    - "!LICENSE.md"
+    - learners/*
+    - instructors/*
+    - profiles/*
+  post-render:
+    - bash _extensions\astrodimitrios\carpentries\post-process-html.sh
+
+carpentries:
+  source: https://github.com/astroDimitrios/sandpaper-docs-quarto
+  branch: main
+  contact: d.theodorakis@metoffice.gov.uk
+  license: CC-BY 4.0
+  citation: CITATION.cff
+  carpentry: cp
+  carpentry_name: Carpentries
+  carpentry_icon: carpentries
+  life_cycle: beta
+  beta: yes
+  created: '2023-08-04'
+  keywords: software, data, lesson, The Carpentries, Fortran
+  episodes:
+    - introduction.md
+    - episodes.Rmd
+    - editing.md
+    - example.Rmd
+    - deployment.md
+    - update.md
+    - pull-request.md
+  # Information for Learners
+  resources: True
+  learners:
+    - reference.md
+    - setup.md
+    - github-pat.md
+    - component-guide.md
+    - migrating-from-styles.md
+    - style.md
+  # Information for Instructors
+  instructors:
+    - instructor-notes.md
 
 website:
   title: "Introduction to The Carpentries Workbench"
-  favicon: need-the-logo.png
-  bread-crumbs: false
-  page-navigation: true
-  back-to-top-navigation: true
-  reader-mode: true
-  repo-url: https://github.com/astroDimitrios/sandpaper-docs-quarto
-  repo-actions: [edit, issue]
-  search:
-    location: navbar
-    type: overlay
-  navbar:
-    website:
-    tools:
-      - icon: github
-        menu:
-          - text: Source Code
-            href:  https://code.com
-          - text: Report a Bug
-            href:  https://bugs.com
-  sidebar:
-    style: "floating"
-    contents:
-      - episodes/introduction.md
-
-language:
-  search-box-placeholder: Search
 
 format:
-  html:
-    theme: cosmo
-    css: styles.css
-    toc: true
+  carpentries-html

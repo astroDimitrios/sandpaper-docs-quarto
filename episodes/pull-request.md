@@ -2,6 +2,9 @@
 title: "Auditing Pull Requests"
 teaching: 5
 exercises: 0
+episode: 7
+episodes: 7
+input_file: "pull-request.md"
 ---
 
 ::::::::::::::::::::::::::::: questions

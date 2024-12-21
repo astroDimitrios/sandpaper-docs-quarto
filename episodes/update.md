@@ -2,6 +2,9 @@
 title: "Maintaining a Healthy Infrastructure"
 teaching: 10
 exercises: 2
+episode: 6
+episodes: 7
+input_file: "update.md"
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 

@@ -2,6 +2,9 @@
 title: "Introduction to The Carpentries Workbench"
 teaching: 10
 exercises: 2
+episode: 1
+episodes: 7
+input_file: "introduction"
 ---
 
 :::::::::::: questions

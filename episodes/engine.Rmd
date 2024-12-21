@@ -2,6 +2,7 @@
 title: "The Lesson Engine: {sandpaper}"
 teaching: 10
 exercises: 2
+input_file: "engine"
 ---
 
 ::::::::::::: questions

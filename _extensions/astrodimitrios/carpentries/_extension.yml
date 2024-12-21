@@ -1,0 +1,24 @@
+title: Carpentries
+author: Dimitrios Theodorakis
+version: 1.0.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    common:
+      filters:
+        - lesson.lua
+        - progress.lua
+        - nav.lua
+        - add-assets.lua
+        - images-filter.lua
+    html:
+      theme: bootstrap
+      toc: false
+      code-copy: true
+      mainfont: Mulish
+      template: templates/template.html
+      template-partials:
+        - templates/metadata.html
+        - templates/title-block.html
+        - templates/toc.html
+        - templates/footer.html

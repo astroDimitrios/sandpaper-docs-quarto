@@ -2,6 +2,9 @@
 title: "Lesson Deployment"
 teaching: 5
 exercises: 0
+episode: 5
+episodes: 7
+input_file: "deployment"
 ---
 
 ::::::::::::::::::::::::::::: questions

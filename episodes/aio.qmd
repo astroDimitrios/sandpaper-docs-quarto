@@ -1,0 +1,11 @@
+{{< include introduction.md >}}
+{{< include episodes.Rmd >}}
+{{< include editing.md >}}
+{{< include example.Rmd >}}
+{{< include deployment.md >}}
+{{< include update.md >}}
+{{< include pull-request.md >}}
+---
+title: 'All in One Page'
+input_file: 'aio'
+---
