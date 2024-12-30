@@ -1,6 +1,7 @@
 # quarto files
 episodes/*html
 site
+site_libs
 _site
 !site/README.md
 */favicons
@@ -60,3 +61,5 @@ po/*~
 renv/
 
 /.quarto/
+
+.vscode
