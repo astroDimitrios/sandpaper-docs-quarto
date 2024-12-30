@@ -32,6 +32,7 @@ episodes/extract_all_images.qmd
 /*.Rcheck/
 
 # RStudio files
+*.Rproj
 .Rproj.user/
 
 # produced vignettes
