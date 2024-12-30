@@ -1,7 +1,7 @@
 # quarto files
 episodes/*html
-site/*
-_site/*
+site
+_site
 !site/README.md
 
 # History files
@@ -50,6 +50,6 @@ docs/
 # translation temp files
 po/*~
 
-renv/sandbox
+renv/
 
 /.quarto/
