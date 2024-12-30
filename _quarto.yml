@@ -46,6 +46,7 @@ carpentries:
 
 website:
   title: "Introduction to The Carpentries Workbench"
+  site-url: "https://astrodimitrios.github.io/sandpaper-docs-quarto/"
 
 format:
   carpentries-html

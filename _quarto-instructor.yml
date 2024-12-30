@@ -3,3 +3,6 @@ project:
 
 carpentries:
   instructor: True
+
+website:
+  site-url: "https://astrodimitrios.github.io/sandpaper-docs-quarto/instructor"
