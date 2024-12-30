@@ -292,8 +292,3 @@ to this directory.
 
 [^usethis-dependency]: The {usethis} package is a dependency of {sandpaper}, so
 you already have it installed when you install {sandpaper} :)
-
-<!-- Please do not delete anything below this line -->
-
-```{r links, child = sandpaper::template_links()}
-```
