@@ -10,7 +10,6 @@ contributes:
         - progress.lua
         - nav.lua
         - add-assets.lua
-        - images-filter.lua
     html:
       theme: bootstrap
       toc: false
