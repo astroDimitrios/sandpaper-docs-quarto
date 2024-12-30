@@ -3,6 +3,13 @@ episodes/*html
 site
 _site
 !site/README.md
+*/favicons
+*/images
+*/javascripts
+*/*_files
+index_files
+episodes/aio.qmd
+episodes/extract_all_images.qmd
 
 # History files
 .Rhistory
