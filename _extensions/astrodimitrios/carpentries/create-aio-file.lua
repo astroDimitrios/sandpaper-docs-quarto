@@ -1,3 +1,23 @@
+local title
+local site_url
+local cp_icon
+
+function remove_prefix(str, prefix)
+  if str:sub(1, #prefix) == prefix then
+      return str:sub(#prefix + 1)
+  else
+      return str
+  end
+end
+
+function remove_suffix(str, suffix)
+  if str:sub(#str - (#suffix - 1), #str) == suffix then
+      return str:sub(1, #str - #suffix)
+  else
+      return str
+  end
+end
+
 function read_quarto_yaml_files_episodes(filename)
   -- Open the _quarto.yml file
   local file = io.open(filename, "r")
@@ -24,6 +44,15 @@ function read_quarto_yaml_files_episodes(filename)
       if key == "  episodes" then
         found_episodes = true
       end
+      if key == "  title" then
+        title = value
+      end
+      if key == "  site-url" then
+        site_url = value
+      end
+      if key == "  carpentry_icon" then
+        cp_icon = value
+      end
     end
   end
 
@@ -36,15 +65,15 @@ function write_aio_file(episodes)
   local dir = os.getenv("PWD")
   local filename = dir .. "/episodes/aio.qmd"
   local aio_file = io.open(filename, "w")
+  local aio_content = ""
   if aio_file then
-    local aio_content = ""
     for i, episode in ipairs(episodes) do
       aio_content = aio_content .. "{{< include " .. episode .. " >}}\n"
     end
     -- The document yaml goes at the end to overwrite all the
     -- yaml metadata from the included files
     aio_content = aio_content .. "---\ntitle: 'All in One Page'\ninput_file: 'aio'\n---\n"
-    print(aio_content)
+    -- print(aio_content)
     aio_file:write(aio_content)
     aio_file:close()
   else
@@ -56,6 +85,8 @@ function write_all_images_file(episodes)
   print("Writing All Images Presentation")
   local dir = os.getenv("PWD")
   local filename = dir .. "/episodes/extract_all_images.qmd"
+  local key_points_filename = dir .. "/episodes/key-points.qmd"
+  local key_points_content = ""
   local aio_file = io.open(filename, "w")
   if aio_file then
     local aio_content = ""
@@ -65,34 +96,53 @@ function write_all_images_file(episodes)
       if episode_file then
         for line in episode_file:lines() do
           local key, value = line:match("(.[^:]+): (.*)")
-          print(episode_filename)
-          print(key)
-          print(value)
           if key == "title" then
             value = value:gsub("\"", "")
             aio_content = aio_content.."\n\n# "..value.."\n\n"
-            -- print(value)
+            key_points_content = key_points_content.."\n\n# ["..value.."]("..episode..")\n\n"
             break
           end
         end
         episode_file:close()
         aio_content = aio_content.."{{< include "..episode.." >}}\n"
+        key_points_content = key_points_content.."{{< include "..episode.." >}}\n"
       else
         error("Couldn't open the episode file: "..episode_filename)
       end
     end
     -- The document yaml goes at the end to overwrite all the
     -- yaml metadata from the included files
-    aio_content = aio_content.."---\ntitle: 'Extract All Images'\n"
+    title = remove_prefix(title, ' ')
+    title = remove_prefix(title, '"')
+    title = remove_prefix(title, "'")
+    title = remove_suffix(title, '"')
+    title = remove_suffix(title, "'")
+    cp_icon = remove_prefix(cp_icon, ' ')
+    -- print(title)
+    aio_content = aio_content.."---\ntitle: "..title.."\n"
+    aio_content = aio_content.."subtitle: 'Extract All Images'\n"
     aio_content = aio_content.."format: \n  revealjs:\n"
     aio_content = aio_content.."    slide-level: 2\n    navigation-mode: vertical\n"
+    aio_content = aio_content.."    logo: ../site_libs/quarto-contrib/carpentries-images-1.0.0/images/"..cp_icon.."-logo-sm.svg\n"
+    aio_content = aio_content.."    footer: '"..title..": Extract All Images'\n"
+    aio_content = aio_content.."    scrollable: true\n"
     aio_content = aio_content.."filters:\n  - "..dir.."/_extensions/astrodimitrios/carpentries/images-filter.lua\n"
     aio_content = aio_content.."---\n"
-    print(aio_content)
     aio_file:write(aio_content)
     aio_file:close()
   else
     error("Couldn't create All Images presentation file", 2)
+  end
+  local key_points_file = io.open(key_points_filename, "w")
+  if key_points_file then
+    print("Writing Key Points File")
+    key_points_content = key_points_content.."---\ntitle: Key Points\n"
+    key_points_content = key_points_content.."filters:\n  - "..dir.."/_extensions/astrodimitrios/carpentries/key-points-filter.lua\n"
+    key_points_content = key_points_content.."---\n"
+    key_points_file:write(key_points_content)
+    key_points_file:close()
+  else
+    error("Couldn't create Key Points file", 2)
   end
 end
 
