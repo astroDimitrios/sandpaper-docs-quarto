@@ -3,8 +3,10 @@ project:
   pre-render:
     - _extensions\astrodimitrios\carpentries\create-aio-file.lua
   render:
+    - index.*
     - episodes/*
     - learners/*
+    - "!learners/setup.md"
     - instructors/*
     - profiles/*
   post-render:
@@ -35,7 +37,6 @@ carpentries:
   resources: True
   learners:
     - reference.md
-    - setup.md
     - github-pat.md
     - component-guide.md
     - migrating-from-styles.md

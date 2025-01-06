@@ -1,5 +1,5 @@
 ---
-site: sandpaper::sandpaper_site
+title: Summary and Setup
 ---
 
 
@@ -34,3 +34,5 @@ If you are looking to get started using the workbench, head over to the
 
 ::::::::::::::::::
 
+
+{{< include learners/setup.md >}}

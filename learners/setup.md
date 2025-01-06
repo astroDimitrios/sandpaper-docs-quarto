@@ -1,7 +1,3 @@
----
-title: Setup
----
-
 ## Overview
 
 The lesson infrastructure is built on Git, [The R language][R], and [pandoc]. It consists of 
