@@ -13,8 +13,8 @@ episodes/aio.qmd
 episodes/extract_all_images.qmd
 episodes/key-points.qmd
 profiles/profiles.qmd
-_extensions\astrodimitrios\carpentries\templates\more-dropdown.html
-_extensions\astrodimitrios\carpentries\templates\nav.html
+_extensions/astrodimitrios/carpentries/templates/more-dropdown.html
+_extensions/astrodimitrios/carpentries/templates/nav.html
 
 # History files
 .Rhistory
