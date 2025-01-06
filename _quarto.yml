@@ -43,6 +43,9 @@ carpentries:
   # Information for Instructors
   instructors:
     - instructor-notes.md
+  profiles:
+    - maintainer.md
+    - instructor.md
 
 website:
   title: "Introduction to The Carpentries Workbench"
