@@ -107,6 +107,11 @@ local nav_html = ""
 
 function write_nav_html_file(episodes)
   local dir = os.getenv("PWD")
+  local episode_accordion_html = accordion_html:gsub("{{episode_href}}", "index.html")
+  episode_accordion_html = episode_accordion_html:gsub("{{nav_number}}", nav_number)
+  nav_number = nav_number + 1
+  episode_accordion_html = episode_accordion_html:gsub("{{episode_title}}", "Summary and Setup")
+  nav_html = nav_html.."\n\n"..episode_accordion_html
   for i, episode in ipairs(episodes) do
     -- Remove extension
     local input_file_name = episode:match("(.+)%..+$")
