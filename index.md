@@ -22,7 +22,6 @@ The new infrastructure will have the following features:
 
 ::::::::::::::::::::::::::::
 
-
 :::::: callout
 
 ### :construction: Under Construction :construction:
@@ -34,5 +33,4 @@ If you are looking to get started using the workbench, head over to the
 
 ::::::::::::::::::
 
-
-{{< include learners/setup.md >}}
+{{< include ./learners/setup.md >}}
