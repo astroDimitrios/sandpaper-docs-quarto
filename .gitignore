@@ -11,6 +11,7 @@ _site
 index_files
 episodes/aio.qmd
 episodes/extract_all_images.qmd
+episodes/key-points.qmd
 profiles/profiles.qmd
 
 # History files
