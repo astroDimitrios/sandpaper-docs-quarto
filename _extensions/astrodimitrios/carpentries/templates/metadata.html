@@ -23,9 +23,13 @@
     <title>$pagetitle$$if(title-prefix)$ – $title-prefix$$endif$</title>
 
     $if(carpentries.instructor)$
-    <script src="../../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
-    <script src="../../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
-    <link href="../../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
+    <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+    <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+    <link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
+    $else$
+    <script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
+    <script src="site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
+    <link href="site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet">
     $endif$
 
     <script src="$quarto_assets$quarto-nav/quarto-nav.js"></script>
@@ -50,7 +54,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
 
-    $for(css)$
+    <!-- $for(css)$
       <link rel="stylesheet" href="$css$" />
     $endfor$
     $for(header-includes)$
@@ -58,4 +62,4 @@
     $endfor$
     $if(math)$
       $math$
-    $endif$
+    $endif$ -->

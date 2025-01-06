@@ -5,16 +5,16 @@ local system = require 'pandoc.system'
 function set_asset_paths(meta)
 
     if meta.carpentries.instructor ~= nil then
-      meta.image_path = pandoc.MetaString("../../site_libs/quarto-contrib/carpentries-images-1.0.0/images/")
-      meta.favicon_path = pandoc.MetaString("../../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/")
-      meta.webmanifest_path = pandoc.MetaString("../../site_libs/quarto-contrib/carpentries-manifest-1.0.0/")
-      meta.quarto_assets = pandoc.MetaString("../../site_libs/quarto-contrib/quarto-1.5.57/")
-    else 
       meta.image_path = pandoc.MetaString("../site_libs/quarto-contrib/carpentries-images-1.0.0/images/")
       meta.favicon_path = pandoc.MetaString("../site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/")
       meta.webmanifest_path = pandoc.MetaString("../site_libs/quarto-contrib/carpentries-manifest-1.0.0/")
       meta.quarto_assets = pandoc.MetaString("../site_libs/quarto-contrib/quarto-1.5.57/")
-
+    else 
+      meta.image_path = pandoc.MetaString("site_libs/quarto-contrib/carpentries-images-1.0.0/images/")
+      meta.favicon_path = pandoc.MetaString("site_libs/quarto-contrib/carpentries-favicons-1.0.0/favicons/")
+      meta.webmanifest_path = pandoc.MetaString("site_libs/quarto-contrib/carpentries-manifest-1.0.0/")
+      meta.quarto_assets = pandoc.MetaString("site_libs/quarto-contrib/quarto-1.5.57/")
+    
       quarto.doc.add_html_dependency({
         name = "carpentries-theme-toggle",
         version = "1.0.0",

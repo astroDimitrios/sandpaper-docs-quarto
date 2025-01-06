@@ -11,8 +11,8 @@ contributes:
         - add-assets.lua
     html:
       theme: bootstrap
-      toc: false
-      code-copy: true
+      toc: true
+      code-copy: false
       mainfont: Mulish
       template: templates/template.html
       template-partials:

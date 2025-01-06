@@ -141,7 +141,7 @@
             data-feather="chevron-down"></i>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><button class="dropdown-item" type="button" onclick="window.location.href='../$backpath$$fullpath$/$outputfile$';">{{
+          <li><button class="dropdown-item" type="button" onclick="window.location.href='../$outputfile$';">{{
               translate.LearnerView }}</button></li>
         </ul>
         $else$
@@ -151,7 +151,7 @@
             data-feather="chevron-down"></i>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><button class="dropdown-item" type="button" onclick="window.location.href='$backpath$instructor/$fullpath$/$outputfile$';">{{
+          <li><button class="dropdown-item" type="button" onclick="window.location.href='./instructor/$outputfile$';">{{
               translate.InstructorView }}</button></li>
         </ul>
         $endif$
@@ -193,13 +193,13 @@
         </li>
         $if(carpentries.instructor)$
         <li class="nav-item">
-          <a class="nav-link" href="instructor/key-points.html">{{ translate.KeyPoints }}</a>
+          <a class="nav-link" href="key-points.html">{{ translate.KeyPoints }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="instructor/instructor-notes.html">{{ translate.InstructorNotes }}</a>
+          <a class="nav-link" href="instructor-notes.html">{{ translate.InstructorNotes }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="instructor/episodes/extract_all_images.html">{{ translate.Extract AllImages }}</a>
+          <a class="nav-link" href="extract_all_images.html">{{ translate.Extract AllImages }}</a>
         </li>
         $else$
         <li class="nav-item">
@@ -212,16 +212,16 @@
           <a class="nav-link" href="profiles.html">{{ translate.LearnerProfiles }}</a>
         </li>
         $endif$
-        {{#more}}
+        $if(carpentries.resources)$
           <li class="nav-item dropdown">
             <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
               {{ translate.More }} <i data-feather="chevron-down"></i>
             </button>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              {{& more }}
+              $more-dropdown.html()$
             </ul>
           </li>
-          {{/more}}
+        $endif$
       </ul>
     </div>
     <!--
