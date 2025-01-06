@@ -2,6 +2,8 @@ project:
   type: website
   pre-render:
     - _extensions\astrodimitrios\carpentries\create-aio-file.lua
+    - _extensions\astrodimitrios\carpentries\create-profiles-file.lua
+    - _extensions\astrodimitrios\carpentries\nav.lua
   render:
     - index.*
     - episodes/*
