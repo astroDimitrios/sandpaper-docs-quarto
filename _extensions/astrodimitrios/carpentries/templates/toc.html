@@ -133,16 +133,15 @@
               aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
 
               <div class="accordion-body">
-                {{{ sidebar }}}
+                $nav.html()$
               </div>
             </div>
           </div>
+        </div>
+        <!-- <a href="index.html">{{ translate.Home }}</a> -->
 
-          <a href="index.html">{{ translate.Home }}</a>
-
-          <hr class="half-width" />
-
-          $if(resources)$
+        <hr class="half-width" />
+        $if(carpentries.resources)$
           <div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingTwelve">
@@ -162,16 +161,16 @@
                       context _before_ overview -->
                       <a href="index.html#setup">{{ translate.Setup }}</a>
                     </li>
-                    $if(instructor)$
+                    $if(carpentries.instructor)$
                     <li>
-                      <a href="instructor/key-points.html">{{ translate.KeyPoints }}</a>
+                      <a href="key-points.html">{{ translate.KeyPoints }}</a>
                     </li>
                     <li>
-                      <a href="instructor/instructor-notes.html">{{ translate.InstructorNotes
+                      <a href="instructor-notes.html">{{ translate.InstructorNotes
                         }}</a>
                     </li>
                     <li>
-                      <a href="instructor/episodes/extract_all_images.html">{{ translate.ExtractAllImages }}</a>
+                      <a href="extract_all_images.html">{{ translate.ExtractAllImages }}</a>
                     </li>
                     $else$
                     <li>
@@ -190,7 +189,7 @@
               </div>
             </div>
           </div>
-          <hr class="half-width lesson-resources" />
+          <!-- <hr class="half-width lesson-resources" /> -->
           $endif$
 
           $if(aio)$

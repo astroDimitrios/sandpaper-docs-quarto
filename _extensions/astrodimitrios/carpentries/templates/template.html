@@ -12,6 +12,9 @@
     <div class="container">
       <div class="row">
         $toc.html()$
+        $if(toc)$
+        $quarto-page-toc.html()$
+        $endif$
         $body$
       </div>
       $footer.html()$

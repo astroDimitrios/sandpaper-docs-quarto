@@ -4,6 +4,7 @@ project:
     - _extensions\astrodimitrios\carpentries\create-aio-file.lua
     - _extensions\astrodimitrios\carpentries\create-profiles-file.lua
     - _extensions\astrodimitrios\carpentries\nav.lua
+    - _extensions\astrodimitrios\carpentries\more.lua
   render:
     - index.*
     - episodes/*

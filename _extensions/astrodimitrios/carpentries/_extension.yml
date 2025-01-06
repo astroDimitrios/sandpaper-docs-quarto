@@ -8,7 +8,6 @@ contributes:
       filters:
         - lesson.lua
         - progress.lua
-        - nav.lua
         - add-assets.lua
     html:
       theme: bootstrap
@@ -21,3 +20,6 @@ contributes:
         - templates/title-block.html
         - templates/toc.html
         - templates/footer.html
+        - templates/nav.html
+        - templates/quarto-page-toc.html
+        - templates/more-dropdown.html
