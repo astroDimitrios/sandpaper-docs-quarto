@@ -1,9 +1,9 @@
 <div id="sidebar-col" class="col-lg-4">
   <div id="sidebar" class="sidebar">
     <nav aria-labelledby="flush-headingEleven">
-      <button role="button" aria-label="{{ translate.CloseMenu }}" alt="{{ translate.CloseMenu }}" aria-expanded="true"
-        aria-controls="sidebar" class="collapse-toggle" data-collapse="{{ translate.Collapse }} "
-        data-episodes="{{ translate.Episodes }} ">
+      <button role="button" aria-label="$translate.CloseMenu$" alt="$translate.CloseMenu$" aria-expanded="true"
+        aria-controls="sidebar" class="collapse-toggle" data-collapse="$translate.Collapse$"
+        data-episodes="$translate.Episodes$">
         <i class="search-icon" data-feather="x" role="img"></i>
       </button>
       <div class="sidebar-inner">
@@ -68,26 +68,26 @@
                   <h2 class="accordion-header" id="flush-headingNine">
                     <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
-                      <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> {{ translate.InstructorView }}
+                      <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> $translate.InstructorView$
                     </button>
                   </h2>
                   <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine"
                     data-bs-parent="#accordionFlush2">
                     <div class="accordion-body">
-                      <a href="../$outputfile$">{{ translate.LearnerView }}</a>
+                      <a href="../$outputfile$">$translate.LearnerView$</a>
                     </div>
                   </div>
                   $else$
                   <h2 class="accordion-header" id="flush-headingNine">
                     <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
-                      <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> {{ translate.LearnerView }}
+                      <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> $translate.LearnerView$
                     </button>
                   </h2>
                   <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine"
                     data-bs-parent="#accordionFlush2">
                     <div class="accordion-body">
-                      <a href="instructor/$outputfile$">{{ translate.InstructorView }}</a>
+                      <a href="instructor/$outputfile$">$translate.InstructorView$</a>
                     </div>
                   </div>
                   $endif$
@@ -125,9 +125,7 @@
 
             <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-              <h2 class="accordion-header chapters" id="flush-headingEleven">
-                {{ translate.EPISODES }}
-              </h2>
+              <h2 class="accordion-header chapters" id="flush-headingEleven">$translate.EPISODES$</h2>
             </button>
             <div id="flush-collapseEleven" class="accordion-collapse show collapse"
               aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
@@ -138,7 +136,7 @@
             </div>
           </div>
         </div>
-        <!-- <a href="index.html">{{ translate.Home }}</a> -->
+        <!-- <a href="index.html">$translate.Home$</a> -->
 
         <hr class="half-width" />
         $if(carpentries.resources)$
@@ -148,7 +146,7 @@
                 <button class="accordion-button collapsed"
                   id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve"
                   aria-expanded="false" aria-controls="flush-collapseTwelve">
-                  {{ translate.RESOURCES }}
+                  $translate.RESOURCES$
                 </button>
               </h2>
               <div id="flush-collapseTwelve" class="accordion-collapse collapse"
@@ -159,28 +157,27 @@
                     <li>
                       <!-- NOTE: the reason why we do not use the site root here is because we would need to set the site
                       context _before_ overview -->
-                      <a href="index.html#setup">{{ translate.Setup }}</a>
+                      <a href="index.html#setup">$translate.Setup$</a>
                     </li>
                     $if(carpentries.instructor)$
                     <li>
-                      <a href="key-points.html">{{ translate.KeyPoints }}</a>
+                      <a href="key-points.html">$translate.KeyPoints$</a>
                     </li>
                     <li>
-                      <a href="instructor-notes.html">{{ translate.InstructorNotes
-                        }}</a>
+                      <a href="instructor-notes.html">$translate.InstructorNotes$</a>
                     </li>
                     <li>
-                      <a href="extract_all_images.html">{{ translate.ExtractAllImages }}</a>
+                      <a href="extract_all_images.html">$translate.ExtractAllImages$</a>
                     </li>
                     $else$
                     <li>
-                      <a href="key-points.html">{{ translate.KeyPoints }}</a>
+                      <a href="key-points.html">$translate.KeyPoints$</a>
                     </li>
                     <li>
-                      <a href="reference.html#glossary">{{ translate.Glossary }}</a>
+                      <a href="reference.html#glossary">$translate.Glossary$</a>
                     </li>
                     <li>
-                      <a href="profiles.html">{{ translate.LearnerProfiles }}</a>
+                      <a href="profiles.html">$translate.LearnerProfiles$</a>
                     </li>
                     $endif$
                     <!-- {{{resources}}} -->
@@ -193,7 +190,7 @@
           $endif$
 
           $if(aio)$
-          <a href="$if(instructor)$instructor/$endif$episodes/aio.html">{{ translate.AIO }}</a>
+          <a href="$if(instructor)$instructor/$endif$episodes/aio.html">$translate.AIO$</a>
           $endif$
 
           <hr class="d-none d-sm-block d-md-none" />
@@ -201,10 +198,10 @@
           <div class="d-grid gap-1">
             $if(handout)$
             <form method="get" action="{{handout}}">
-              <button action="submit" class="btn btn-primary-outline">{{ translate.DownloadHandout }}</button>
+              <button action="submit" class="btn btn-primary-outline">$translate.DownloadHandout$</button>
             </form>
             <!-- TODO: Generate Slides -->
-            <!-- <button class="btn btn-primary-outline">{{ translate.ExportSlides }}</button> -->
+            <!-- <button class="btn btn-primary-outline">$translate.ExportSlides$</button> -->
             $endif$
           </div>
         </div><!-- /div.accordion -->

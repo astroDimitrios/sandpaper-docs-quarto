@@ -6,6 +6,7 @@ function set_progress(meta)
     progress = math.floor(pandoc.utils.stringify(meta.episode) / #meta.carpentries.episodes * 100 + 0.5)
   end
   meta.progress = pandoc.MetaString(progress)
+  print(meta.translate.Episodes)
   return meta
 end
 
